@@ -1,6 +1,6 @@
 #Problem statement can be found here :: https://leetcode.com/problems/palindrome-number/
 
-class isPalindromeSolution(object):
+class Solution:
     def isPalindrome(self, x):
         """
         :type x: int
