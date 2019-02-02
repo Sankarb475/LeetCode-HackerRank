@@ -12,6 +12,8 @@ class Solution:
         return False
 
 
+#a different way to solve the same problem
+
 class IsPalindromeSolution:
     def isPalindrome(self, x):
         if (x<0): return False
