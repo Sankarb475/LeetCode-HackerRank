@@ -22,7 +22,7 @@ class RomanToIntSolution:
                     outputNum = outputNum + romanDict[inputList[i + 1]]
             else:
                 outputNum = outputNum + romanDict[inputList[i + 1]] - romanDict[inputList[i]]
-                if (i ++ 3 == len(inputList)):
+                if (i + 3 == len(inputList)):
                     outputNum = outputNum + romanDict[inputList[i + 2]]
                 bool = True
 
