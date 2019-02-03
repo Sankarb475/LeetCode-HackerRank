@@ -22,8 +22,7 @@ class LongestCommonPrefixSolution:
         for j in range(size+1):
             for a in strs:
                 list1.append(a[:j+1])
-            set1 = set(list1)
-            if(len(set1) == 1):
+            if(len(set(list1)) == 1):
                 list1 = []
             else:
                 return a[:j]
