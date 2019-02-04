@@ -11,8 +11,7 @@ class SingleNumberSolution:
         return list(set(nums) - set(list1))[0]
 
     
-    # another way to slove this
-    
+# another way to slove this
 from collections import Counter
 
 class SingleNumberSolution:
@@ -27,6 +26,14 @@ class SingleNumberSolution:
                 return keys
         
         
-                
+# another way to solve this
+
+class SingleNumberSolution:
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        return 2*sum(set(nums))-sum(nums)
             
         
