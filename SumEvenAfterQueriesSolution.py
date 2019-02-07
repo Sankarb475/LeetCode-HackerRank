@@ -28,6 +28,19 @@ class SumEvenAfterQueriesSolution:
             
                 
             
-            
+# O(n^2) solution 
+
+class SumEvenAfterQueriesSolution:
+    def sumEvenAfterQueries(self, A: 'List[int]', queries: 'List[List[int]]') -> 'List[int]':
+        outList = []
+        sumOut = 0
+        for i in queries:
+            A[i[1]] = A[i[1]] + i[0]
+            for j in A:
+                if j%2 ==0:
+                    sumOut = sumOut + j
+            outList.append(sumOut)
+            sumOut = 0
+        return outList
             
         
