@@ -9,7 +9,6 @@ class SumEvenAfterQueriesSolution:
         for j in A:
             if j % 2 == 0:
                 sumOut = sumOut + j
-        out = 0
         for i in queries:
             A[i[1]] = A[i[1]] + i[0]
             if (A[i[1]] - i[0]) % 2 != 0:
