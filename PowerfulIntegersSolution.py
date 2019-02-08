@@ -38,6 +38,8 @@ class PowerfulIntegersSolution:
 
 
 # another solution but slow, would not pass through Leetcode acceptance approval
+# time limit exceeded error
+
 
 class PowerfulIntegersSolution:
     def powerfulIntegers(self, x: 'int', y: 'int', bound: 'int') -> 'List[int]':
