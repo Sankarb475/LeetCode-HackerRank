@@ -3,7 +3,7 @@
 # slow and not accepted but accurate
 
 class PrimePalindromeSolution:
-    def primePalindrome(self, N: 'int') -> 'int':
+    def primePalindrome(self, N):
         return 1
         m = True
         if (N==1 or N ==2):
@@ -15,7 +15,7 @@ class PrimePalindromeSolution:
                     return N
             N = N + 1
             
-    def is_prime(self,b : 'Int'):
+    def is_prime(self,b):
         if (b<6):
             for i in range(2,b):
                 if b%i == 0:
@@ -26,7 +26,7 @@ class PrimePalindromeSolution:
                 return False
         return True 
         
-    def is_palindrome(self, a: 'Int'):
+    def is_palindrome(self, a):
         if int(str(a)[::-1]) == a:
             return True
         return False
