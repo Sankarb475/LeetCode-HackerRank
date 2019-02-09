@@ -8,13 +8,13 @@ class LemonadeChangeSolution:
             if i == 5:
                 balance[5] = balance[5] + 1
                 continue
-            if i == 10:
+            elif i == 10:
                 if balance[5] >0:
                     balance[5] = balance[5] - 1
                     balance[10] = balance[10] + 1
                 else:
                     return False
-            if i == 20:
+            elif i == 20:
                 if balance[10] >= 1 and balance[5] >=1:
                     balance[5] = balance[5] - 1
                     balance[10] = balance[10] - 1
@@ -25,4 +25,5 @@ class LemonadeChangeSolution:
                 else:
                     return False
         return True
+    
     
