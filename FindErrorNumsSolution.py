@@ -26,5 +26,32 @@ class FindErrorNumsSolution:
             listOut.append(nums[-1] + 1)
         return listOut
             
+
+#another way of soving it
+
+class FindErrorNumsSolution(object):
+    def findErrorNums(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        
+        s = set([])
+        
+        total = 0
+        target = 0
+        dupe = None
+        
+        for i in range(1, len(nums)+1):
+            target += i
+            this = nums.pop()
             
+            if this in s:
+                dupe = this
+            else:
+                s.add(this)
+                total += this
+                
+        
+        return [dupe, target-total]
             
