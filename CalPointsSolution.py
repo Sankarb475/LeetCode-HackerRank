@@ -1,6 +1,5 @@
 #solution of https://leetcode.com/problems/baseball-game/      ==> Easy
 
-# not so memory efficient :P
 
 class CalPointsSolution:
     def calPoints(self, ops: 'List[str]') -> 'int':
@@ -11,7 +10,6 @@ class CalPointsSolution:
                 listOut.append(int(ops[i]))
             elif ops[i] == "C":
                 a = listOut.remove(listOut[-1])
-                print("a",a)
             elif ops[i] == "D":
                 listOut.append(listOut[-1] * 2)
             elif ops[i] == "+":
