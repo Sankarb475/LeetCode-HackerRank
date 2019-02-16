@@ -33,6 +33,12 @@ class CountPrimeSetBitsSolution:
                 count = 0
                 return False
         return True
+    
+    
+# another solution not created by me
+class CountPrimeSetBitsSolution:
+    def countPrimeSetBits(self, L, R):
+        return sum(665772 >> bin(i).count('1') & 1 for i in range(L, R+1))
             
         
                     
