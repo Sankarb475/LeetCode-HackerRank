@@ -33,6 +33,38 @@ class CountPrimeSetBitsSolution:
                 count = 0
                 return False
         return True
+
+# another solution using bin() function, faster than the last one.
+
+class Solution:
+    def countPrimeSetBits(self, L: 'int', R: 'int') -> 'int':
+        outCount = 0
+        count = 0
+        n = True
+        for i in range(L,R+1):
+            a = bin(i)[2:]
+            for m in a:
+                if m == '1':
+                    count = count + 1
+            if count in [1,4]:
+                count = 0
+                continue
+            elif count in [2,3]:
+                outCount = outCount + 1
+            else:
+                if self.is_palindrome(count):
+                    outCount = outCount + 1
+            count = 0
+        
+        return outCount 
+    
+    def is_palindrome(self,count):
+        for m in range(2,count//2):
+            if count%m == 0:
+                count = 0
+                return False
+        return True
+    
     
     
 # another solution not created by me
