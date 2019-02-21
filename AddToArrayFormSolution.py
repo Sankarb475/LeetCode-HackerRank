@@ -1,4 +1,4 @@
-# solution of https://leetcode.com/problems/add-to-array-form-of-integer/
+# solution of https://leetcode.com/problems/add-to-array-form-of-integer/ ==> easy
 
 #fast and memory efficient
 
