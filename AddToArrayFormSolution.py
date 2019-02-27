@@ -1,5 +1,6 @@
 # solution of https://leetcode.com/problems/add-to-array-form-of-integer/ ==> easy
 
+
 #fast and memory efficient
 
 class AddToArrayFormSolution:
@@ -9,6 +10,7 @@ class AddToArrayFormSolution:
         return list(map(int,c))
 
 
+#another way of solving it
 
 class AddToArrayFormSolution:
     def addToArrayForm(self, A: 'List[int]', K: 'int') -> 'List[int]':
