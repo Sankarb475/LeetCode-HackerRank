@@ -10,3 +10,11 @@ class RepeatedNTimesSolution:
                 return i
             else:
                 list1.append(i)
+
+                
+class Solution:
+    def repeatedNTimes(self, A: List[int]) -> int:
+        A = sorted(A)
+        for i in range(1,len(A)):
+            if A[i] == A[i-1]:
+                return A[i]                
