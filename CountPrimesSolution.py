@@ -7,7 +7,6 @@ from math import sqrt
 class Solution:
     def countPrimes(self, n: int) -> int:
         count = -2
-        is_prime = True
         if (n ==3):
             return 1
         if (n<=2):
