@@ -13,3 +13,13 @@ class Solution:
         if num == 1:
             return True
         return False
+    
+#Recursive solution
+
+class Solution:
+    def isUgly(self, num: int) -> bool:
+        if num == 0:
+            return False
+        if num == 1:
+            return True
+        return (num%2==0 and self.isUgly(num/2)) or (num%3==0 and self.isUgly(num/3)) or (num%5==0 and self.isUgly(num/5))
