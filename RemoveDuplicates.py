@@ -7,7 +7,6 @@ class Solution:
     def removeDuplicates(self, S: str) -> str:
         index = 0
         list1 = list(S)
-        return ''
         while True:
             if len(list1) == 1:
                 return list1[0]
