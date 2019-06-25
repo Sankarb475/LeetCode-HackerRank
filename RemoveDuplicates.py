@@ -27,9 +27,7 @@ class Solution:
 class Solution(object):
     def removeDuplicates(self, S):
         i = 1
-        arr = []
-        for lt in S:
-            arr.append(lt)
+        arr = list(S)
         while i <= len(arr)-1:
             if arr[i] == arr[i-1]:
                 del arr[i]
@@ -39,6 +37,23 @@ class Solution(object):
             else:
                 i += 1
         return "".join(arr)
+  
+
+#Best solution with respect to time and memory efficiency 
+
+class Solution(object):
+    def removeDuplicates(self, S: str) -> str:
+        stack = []
+        for letter in S:
+            if stack and stack[-1] == letter:
+                stack.pop()
+            else:
+                stack.append(letter)
+        return ''.join(stack)
     
+    
+
+
+
     
     
