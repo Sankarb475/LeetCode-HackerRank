@@ -13,3 +13,13 @@ class Solution:
                 nums[i-count], nums[i] = nums[i], nums[i-count] # Swap the nubmer and zero
 
         return
+
+    
+#esiest solution
+
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        for elem in nums:
+            if elem == 0:
+                nums.remove(elem)
+                nums.append(elem)    
