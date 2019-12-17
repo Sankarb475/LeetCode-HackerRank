@@ -13,7 +13,60 @@ class Solution:
                 nums[m] = nums[m-1]
                 nums[m-1] = a
         
-        
+      
+# Using an extra list
+
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        list1 = [0]*len(nums)
+        for i in range(len(nums)):
+            val = (i+k)%len(nums)
+            list1[val] = nums[i]
+        for j in range(len(list1)):
+            nums[j] = list1[j]
+            
+            
+                  
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        k %= len(nums)
+        nums[k:], nums[:k] = nums[:-k], nums[-k:]
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
         
 # This works well if you have non negative integers
 
