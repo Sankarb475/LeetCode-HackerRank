@@ -14,6 +14,19 @@ class Solution:
                 currElem = i
                 count = count + 1                
         return count
+    
+    
+#O(N*2)
+class Solution:
+    def removeCoveredIntervals(self, I: List[List[int]]) -> int:
+        t = 0
+        for (X,Y) in I:
+            for (x,y) in I:
+                if x<=X and Y<=y and (X,Y) != (x,y): break
+            else: t += 1
+        return t
+    
+    
             
 
 # O(N*2)
