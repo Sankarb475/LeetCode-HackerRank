@@ -22,3 +22,12 @@ select m.hacker_id, n.name from (select a.hacker_id, count(submission_id) as 'Nu
 d.score from challenges c join difficulty d on c.difficulty_level = d.difficulty_level) b on a.challenge_id = b.challenge_id where 
 a.score = b.score group by a.hacker_id having count(submission_id)>1) m join hackers n on m.hacker_id = n.hacker_id order by NumberS desc,
 m.hacker_id asc
+
+
+                                          
+# solution of https://www.hackerrank.com/challenges/harry-potter-and-wands/problem
+                                          
+select a.id, b.age, a.coins_needed, a.power from Wands a inner join Wands_Property b on a.code=b.code where b.is_evil!=1 and 
+a.coins_needed=(select min(Wands.coins_needed) from Wands inner join Wands_Property on Wands.code=Wands_Property.code where 
+Wands_Property.age=b.age and Wands.power=a.power) order by a.power desc,b.age desc
+                                                      
